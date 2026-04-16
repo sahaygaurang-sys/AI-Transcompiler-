@@ -6,7 +6,7 @@ A beginner-friendly Streamlit app that translates code between Python and Java u
 
 - Python to Java translation
 - Java to Python translation
-- Gemini API integration
+- HuggingFace API integration
 - Python syntax validation
 - Basic Java structure validation
 - Simple Streamlit web interface
@@ -14,7 +14,7 @@ A beginner-friendly Streamlit app that translates code between Python and Java u
 ## Project Files
 
 - `app.py` -> Streamlit frontend
-- `translator.py` -> Gemini API logic and validation
+- `translator.py` -> HuggingFace logic and validation
 - `prompts.py` -> Prompt template
 - `requirements.txt` -> Python dependencies
 
@@ -40,13 +40,13 @@ pip install -r requirements.txt
 #### Windows CMD
 
 ```bash
-set GEMINI_API_KEY=your_api_key_here
+set HF_TOKEN=your_api_key_here
 ```
 
 #### Windows PowerShell
 
 ```powershell
-$env:GEMINI_API_KEY="your_api_key_here"
+$env:HF_TOKEN="your_huggingface_token_here"
 ```
 
 ### 4. Run the app
@@ -66,11 +66,11 @@ You can deploy this app on Streamlit Community Cloud.
 3. Create a new app
 4. Select your GitHub repository
 5. Choose `app.py` as the entry file
-6. Add `GEMINI_API_KEY` in the app secrets or environment settings
+6. Add `HUGGINGFACE_API_KEY` in the app secrets or environment settings
 7. Deploy
 
 ## Notes
 
 - The Java validation is heuristic only
 - Python validation uses Python's AST parser
-- Gemini may sometimes add small formatting differences, so always review the translated output
+- HuggingFace may sometimes add small formatting differences, so always review the translated output
